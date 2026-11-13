@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Atul Pohane — Associate Product Manager portfolio. Product discovery, user research, prioritization, product strategy and metrics.">
+<title>Atul Pohane | Associate Product Manager</title>
+<style>
+:root{
+  --bg:#0b0d12; --surface:#121620; --surface2:#171c28; --text:#f7f7fb;
+  --muted:#a9b0c0; --line:#273043; --accent:#8b5cf6; --accent2:#22d3ee;
+  --max:1120px; --radius:22px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:linear-gradient(180deg,#090b10 0%,#0d1119 50%,#090b10 100%);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.6}
+a{color:inherit;text-decoration:none}
+.container{width:min(var(--max),calc(100% - 40px));margin:auto}
+nav{position:sticky;top:0;z-index:10;background:rgba(9,11,16,.82);backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.06)}
+.navin{height:70px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-weight:800;letter-spacing:.02em}.logo span{color:var(--accent2)}
+.navlinks{display:flex;gap:24px;color:var(--muted);font-size:14px}.navlinks a:hover{color:#fff}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 18px;border-radius:999px;border:1px solid var(--line);font-weight:700;font-size:14px;transition:.2s}
+.btn.primary{background:linear-gradient(135deg,var(--accent),#6d28d9);border:0}
+.btn:hover{transform:translateY(-2px)}
+.hero{padding:110px 0 85px;position:relative;overflow:hidden}
+.hero:before{content:"";position:absolute;width:480px;height:480px;right:-170px;top:-180px;background:radial-gradient(circle,rgba(139,92,246,.25),transparent 68%);pointer-events:none}
+.eyebrow{display:inline-flex;padding:7px 11px;border:1px solid #30384b;border-radius:999px;color:#c8cde0;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+h1{font-size:clamp(48px,8vw,88px);line-height:.98;letter-spacing:-.055em;margin:22px 0}
+.gradient{background:linear-gradient(90deg,#fff,#c4b5fd,#67e8f9);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{font-size:20px;color:var(--muted);max-width:720px;margin:0 0 28px}
+.actions{display:flex;gap:12px;flex-wrap:wrap}
+.hero-meta{display:flex;gap:35px;flex-wrap:wrap;margin-top:50px}
+.hero-meta strong{display:block;font-size:24px}.hero-meta span{color:var(--muted);font-size:13px}
+section{padding:85px 0;border-top:1px solid rgba(255,255,255,.05)}
+.section-kicker{color:var(--accent2);font-size:12px;font-weight:800;letter-spacing:.13em;text-transform:uppercase}
+h2{font-size:42px;line-height:1.08;letter-spacing:-.035em;margin:9px 0 14px}
+.lead{color:var(--muted);max-width:750px}
+.grid{display:grid;grid-template-columns:repeat(12,1fr);gap:20px}
+.card{background:linear-gradient(180deg,rgba(23,28,40,.95),rgba(16,20,29,.95));border:1px solid var(--line);border-radius:var(--radius);padding:26px}
+.about-text{grid-column:span 7}.skills{grid-column:span 5}
+.card h3{margin:0 0 10px;font-size:20px}.card p{color:var(--muted);margin:0 0 10px}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}.tag{border:1px solid #30394c;color:#cbd1df;border-radius:999px;padding:6px 10px;font-size:12px}
+.case{grid-column:span 4;overflow:hidden;padding:0}.case img{width:100%;height:205px;object-fit:cover;display:block;filter:saturate(.92)}
+.case-body{padding:23px}.case .num{color:var(--accent2);font-size:12px;font-weight:800;letter-spacing:.12em}.case h3{font-size:24px;margin:8px 0}.case p{font-size:14px}
+.case-link{color:#c4b5fd;font-weight:800;font-size:13px}
+.project{margin-top:30px}.project-header{display:grid;grid-template-columns:8fr 4fr;gap:30px;align-items:end}.project-header .statbox{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:20px}.statbox strong{font-size:34px;display:block}.statbox span{color:var(--muted);font-size:13px}
+.project-content{margin-top:30px}.project-content .visual{grid-column:span 6}.project-content .copy{grid-column:span 6}.visual img{width:100%;border-radius:18px;border:1px solid var(--line)}
+.copy h3{margin-top:0}.copy p,.copy li{color:var(--muted)}.copy ul{padding-left:20px}
+.two{grid-template-columns:repeat(2,1fr)}
+.metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:20px}.metric{padding:20px;background:var(--surface);border:1px solid var(--line);border-radius:18px}.metric strong{font-size:25px;display:block}.metric span{font-size:12px;color:var(--muted)}
+.resume{display:grid;grid-template-columns:7fr 5fr;gap:20px}.timeline{border-left:1px solid var(--line);padding-left:25px}.timeline-item{position:relative;margin-bottom:28px}.timeline-item:before{content:"";position:absolute;width:9px;height:9px;border-radius:50%;background:var(--accent);left:-30px;top:8px}.timeline-item h3{margin:0}.timeline-item .small{color:var(--accent2);font-size:12px;font-weight:800}.timeline-item p{color:var(--muted);margin:5px 0}
+.copybox{position:relative}.copybox pre{white-space:pre-wrap;font:14px/1.65 ui-monospace,SFMono-Regular,Menlo,monospace;color:#d8dce8;background:#090c12;border:1px solid var(--line);padding:18px;border-radius:15px;margin:10px 0 0}.copybutton{position:absolute;right:12px;top:12px;background:#20283a;color:#fff;border:1px solid #374157;border-radius:8px;padding:7px 10px;cursor:pointer}
+footer{padding:55px 0;color:var(--muted);border-top:1px solid rgba(255,255,255,.06)}.footerin{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+@media(max-width:850px){
+ .navlinks{display:none}.hero{padding:75px 0 65px}h2{font-size:34px}
+ .about-text,.skills,.case,.project-content .visual,.project-content .copy{grid-column:span 12}
+ .project-header,.resume{grid-template-columns:1fr}.metrics{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:520px){.container{width:min(var(--max),calc(100% - 26px))}h1{font-size:48px}.hero p{font-size:17px}.metrics{grid-template-columns:1fr 1fr}}
+</style>
+</head>
+<body>
+<nav>
+  <div class="container navin">
+    <a class="logo" href="#top">ATUL<span>.</span></a>
+    <div class="navlinks">
+      <a href="#about">About</a><a href="#work">Work</a><a href="#skills">Skills</a><a href="#resume">Resume</a><a href="#linkedin">LinkedIn</a>
+    </div>
+    <a class="btn primary" href="#work">View my work</a>
+  </div>
+</nav>
+
+<main id="top">
+<section class="hero">
+  <div class="container">
+    <span class="eyebrow">Associate Product Manager • Portfolio</span>
+    <h1>Building products<br><span class="gradient">around real problems.</span></h1>
+    <p>I’m Atul Pohane, a technology professional transitioning into Product Management. I combine technical fluency with customer-focused product thinking across discovery, research, prioritization, solution design and metrics.</p>
+    <div class="actions">
+      <a class="btn primary" href="#work">Explore case studies →</a>
+      <a class="btn" href="#resume">View resume</a>
+    </div>
+    <div class="hero-meta">
+      <div><strong>03</strong><span>Portfolio case studies</span></div>
+      <div><strong>02</strong><span>Fellowship capstones</span></div>
+      <div><strong>PM + Tech</strong><span>My differentiator</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+<div class="container">
+  <div class="section-kicker">01 / About</div><h2>From testing software<br>to shaping products.</h2>
+  <div class="grid">
+    <div class="card about-text">
+      <div class="profile-wrap">
+        <img class="profile-photo" src="assets/atul-profile.png" alt="Atul Pohane">
+        <div><h3>My product story</h3><p><b>Senior Consultant • Technology / QA → Product Management</b></p></div>
+      </div>
+      <p style="margin-top:20px">I’m a Senior Consultant with 2.2 years of experience across software testing, automation, APIs and Agile delivery. My technical background has taught me to look closely at requirements, user workflows, defects, APIs and how software is actually delivered.</p>
+      <p>My Product Management Fellowship added the upstream product skills: understanding customer problems, researching users, evaluating opportunities, prioritizing solutions, designing features and defining success metrics.</p>
+      <p>I’m now looking for an Associate Product Manager opportunity where I can combine technical fluency with customer-focused product thinking.</p>
+      <div class="tags"><span class="tag">Customer-centric</span><span class="tag">Structured thinker</span><span class="tag">Technical fluency</span><span class="tag">Outcome focused</span></div>
+    </div>
+    <div class="card skills" id="skills">
+      <h3>What I bring</h3>
+      <p><b>Product:</b> Discovery, PRDs, user stories, prioritization, product strategy, roadmaps</p>
+      <p><b>Research:</b> User interviews, review mining, personas, JTBD, competitive analysis</p>
+      <p><b>Analytics:</b> Product metrics, funnels, experiments, retention and conversion thinking</p>
+      <p><b>Technical:</b> APIs, software testing, automation, Agile/Scrum, SDLC</p>
+      <div class="tags"><span class="tag">Figma</span><span class="tag">SQL</span><span class="tag">Excel</span><span class="tag">Playwright</span><span class="tag">Selenium</span></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section id="work">
+<div class="container">
+  <div class="section-kicker">02 / Selected work</div>
+  <h2>Product thinking, end to end.</h2>
+  <p class="lead">Three portfolio pieces selected from my Product Management Fellowship capstone work. Each focuses on a real product problem, the reasoning behind the solution and how success could be measured.</p>
+  <div class="grid" style="margin-top:30px">
+    <a class="card case" href="#meesho">
+      <img src="assets/meesho_problem.png" alt="Meesho problem statement">
+      <div class="case-body"><div class="num">CASE 01</div><h3>Meesho: Rebuilding trust</h3><p>Improving customer experience and repeat orders in Tier 2 & Tier 3 markets.</p><span class="case-link">Read case study →</span></div>
+    </a>
+    <a class="card case" href="#cred">
+      <img src="assets/cred_problem.png" alt="CRED Rent via Credit Card problem statement">
+      <div class="case-body"><div class="num">CASE 02</div><h3>CRED: Repeat usage</h3><p>Diagnosing a reported 35% decline in recurring Rent Via Credit Card transactions.</p><span class="case-link">Read case study →</span></div>
+    </a>
+    <a class="card case" href="#trial">
+      <img src="assets/meesho_trial.png" alt="Meesho Virtual Trial Room concept">
+      <div class="case-body"><div class="num">CASE 03</div><h3>Meesho: Virtual Trial Room</h3><p>A feature deep-dive for reducing product mismatch before purchase.</p><span class="case-link">Read case study →</span></div>
+    </a>
+  </div>
+</div>
+</section>
+
+<section id="meesho">
+<div class="container">
+  <div class="section-kicker">Case study 01</div>
+  <div class="project-header">
+    <div><h2>Meesho — Rebuilding trust & repeat orders</h2><p class="lead">How might Meesho improve customer experience in Tier 2 & Tier 3 cities after late deliveries and product mismatches contributed to a reported 25% drop in repeat orders?</p></div>
+    <div class="statbox"><strong>25%</strong><span>reported drop in repeat orders</span></div>
+  </div>
+  <div class="metrics"><div class="metric"><strong>100+</strong><span>reviews analyzed</span></div><div class="metric"><strong>30+</strong><span>structured interviews / survey</span></div><div class="metric"><strong>Tier 2/3</strong><span>focus market</span></div><div class="metric"><strong>Repeat</strong><span>purchase outcome</span></div></div>
+  <div class="grid project-content">
+    <div class="visual"><img src="assets/meesho_research.png" alt="Meesho research slide"></div>
+    <div class="copy">
+      <h3>Discovery → insight</h3>
+      <p>The fellowship project analyzed 100+ reviews across Play Store, App Store, Reddit and Facebook, plus around 30+ structured user interviews/survey.</p>
+      <ul><li>Product mismatch created a gap between listing expectations and reality.</li><li>Users had trust concerns around sellers/resellers.</li><li>Returns/refunds and delayed deliveries created additional friction.</li></ul>
+      <h3>Prioritization</h3><p>Product mismatch and platform trust were treated as <b>Must</b> items; engaging activity and return improvements as <b>Should</b> items, while some seller/delivery issues were <b>Could</b> items.</p>
+    </div>
+  </div>
+  <div class="grid project-content">
+    <div class="copy">
+      <h3>Solution direction</h3>
+      <p>Proposed interventions included quality/trust labels, supplier demo clips and a Virtual Trial Room. The intent was to reduce uncertainty before purchase rather than only fix problems after delivery.</p>
+      <h3>What I would measure</h3><p>Repeat purchase rate as the core outcome, supported by return rate, conversion, CSAT/NPS, trust-label conversion and engagement with product videos.</p>
+    </div>
+    <div class="visual"><img src="assets/meesho_priority.png" alt="Meesho pain point prioritization"></div>
+  </div>
+</div>
+</section>
+
+<section id="cred">
+<div class="container">
+  <div class="section-kicker">Case study 02</div>
+  <div class="project-header">
+    <div><h2>CRED — Improving Rent Via Credit Card repeat usage</h2><p class="lead">Diagnosing why a newly launched feature attracted interest but recurring transactions reportedly dropped by 35% within two months.</p></div>
+    <div class="statbox"><strong>35%</strong><span>reported decline in recurring transactions</span></div>
+  </div>
+  <div class="grid project-content">
+    <div class="visual"><img src="assets/cred_pain.png" alt="CRED pain points"></div>
+    <div class="copy">
+      <h3>Problem diagnosis</h3>
+      <p>The project mapped user friction across fees, processing time, rewards, reminders, privacy and reliability.</p>
+      <ul><li>2.5% rent transaction fee was identified as a major barrier.</li><li>Rewards/tokens were perceived as less meaningful than direct cashback.</li><li>Manual reminders and delayed notifications reduced convenience.</li><li>Security/privacy concerns and glitches could reduce trust.</li></ul>
+      <h3>Prioritization</h3><p>Fee/transparency, rewards, reminders and PAN/privacy concerns were treated as Must-Have areas in the project’s MoSCoW framework.</p>
+    </div>
+  </div>
+  <div class="grid project-content">
+    <div class="copy">
+      <h3>Solution mapping</h3>
+      <ul><li>Automated rent receipts and notifications.</li><li>Fee reduction through bank partnerships or a subscription model.</li><li>Personalized rewards with instant redemption.</li><li>In-app ticket generation and tracking for failed transactions.</li></ul>
+      <h3>Success metrics</h3><p>Retention was positioned as the primary outcome, supported by receipt/notification performance, reward redemption and satisfaction, and issue response/resolution metrics.</p>
+    </div>
+    <div class="visual"><img src="assets/cred_mapping.png" alt="CRED problem solution mapping"></div>
+  </div>
+</div>
+</section>
+
+<section id="trial">
+<div class="container">
+  <div class="section-kicker">Case study 03 / Feature deep-dive</div>
+  <div class="project-header">
+    <div><h2>Meesho — Virtual Trial Room</h2><p class="lead">A feature concept designed to reduce product mismatch by helping users visualize clothing and accessories before purchase.</p></div>
+    <div class="statbox"><strong>#4</strong><span>priority among proposed solutions in the project</span></div>
+  </div>
+  <div class="grid project-content">
+    <div class="visual"><img src="assets/meesho_trial.png" alt="Meesho Virtual Trial Room"></div>
+    <div class="copy">
+      <h3>Opportunity</h3><p>Product mismatch was prioritized as a Must-Have pain point. The proposed AI/AR experience lets users upload pictures, provide details and visualize products using a realistic model.</p>
+      <h3>Experience</h3><p>Upload picture → provide details → generate realistic model → visualize clothing/accessories.</p>
+      <h3>Expected impact</h3><ul><li>Reduce guesswork.</li><li>Increase purchase confidence.</li><li>Reduce post-purchase dissatisfaction and returns.</li></ul>
+    </div>
+  </div>
+  <div class="grid project-content">
+    <div class="copy">
+      <h3>Prioritization insight</h3><p>The project scored solutions on Reach, Impact, Confidence and Effort. In-app Quality Badges ranked #1, Demo Clips #2, Try-On Demo #3 and Virtual Trial Room #4. This is a useful PM lesson: the most sophisticated feature is not automatically the highest-priority feature.</p>
+    </div>
+    <div class="visual"><img src="assets/meesho_metrics.png" alt="Meesho success metrics"></div>
+  </div>
+</div>
+</section>
+
+<section id="resume">
+<div class="container">
+  <div class="section-kicker">03 / Resume</div><h2>APM-ready positioning.</h2>
+  <div class="resume">
+    <div class="card">
+      <h3>Professional summary</h3>
+      <p>Technology professional transitioning into Product Management, with hands-on fellowship experience in product discovery, user research, competitive analysis, prioritization, solution design and product metrics. Strong technical foundation across software development lifecycle, APIs, testing and automation, with a focus on turning customer problems into measurable product opportunities.</p>
+      <h3 style="margin-top:25px">Core skills</h3>
+      <div class="tags"><span class="tag">Product Discovery</span><span class="tag">User Research</span><span class="tag">Personas</span><span class="tag">JTBD</span><span class="tag">PRD</span><span class="tag">MoSCoW</span><span class="tag">RICE</span><span class="tag">Product Metrics</span><span class="tag">A/B Testing</span><span class="tag">Competitive Analysis</span><span class="tag">Figma</span><span class="tag">SQL</span><span class="tag">Agile</span></div>
+      <p style="margin-top:22px"><b>Resume PDF:</b> Add your final resume file here and replace this text with a download button.</p>
+    </div>
+    <div class="card">
+      <h3>Experience narrative</h3>
+      <div class="timeline">
+        <div class="timeline-item"><div class="small">TECHNOLOGY / QA</div><h3>Technical foundation</h3><p>Requirements, user workflows, defects, APIs, automation and software delivery.</p></div>
+        <div class="timeline-item"><div class="small">PRODUCT MANAGEMENT FELLOWSHIP</div><h3>Product thinking</h3><p>Customer problem framing, research, market/competitive analysis, prioritization, feature concepts and metrics.</p></div>
+        <div class="timeline-item"><div class="small">TARGET ROLE</div><h3>Associate Product Manager</h3><p>Bring both perspectives into a product team and grow through hands-on discovery and delivery.</p></div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section id="linkedin">
+<div class="container">
+  <div class="section-kicker">04 / LinkedIn-ready</div><h2>Copy you can use.</h2>
+  <div class="grid two">
+    <div class="card copybox">
+      <h3>LinkedIn headline</h3>
+      <pre id="headline">Senior Consultant | Aspiring Associate Product Manager | Product Discovery | User Research | Product Strategy | Technical Background</pre>
+      <button class="copybutton" onclick="copyText('headline',this)">Copy</button>
+    </div>
+    <div class="card copybox">
+      <h3>About section</h3>
+      <pre id="aboutcopy">I’m a Senior Consultant with 2.2 years of experience in software testing, automation, APIs and Agile delivery, currently building my career toward Product Management.
+
+My technology background has given me a strong understanding of engineering workflows, user journeys, requirements, APIs, testing and software delivery. Through my Product Management Fellowship, I developed hands-on experience in product discovery, user research, competitive analysis, prioritization, feature design and product metrics.
+
+My portfolio includes case studies on Meesho and CRED, exploring trust, repeat purchase, payment experience, customer friction and measurable product outcomes.
+
+I’m actively looking for Associate Product Manager opportunities where I can combine technical fluency with customer-focused product thinking and grow through hands-on product discovery and delivery.
+
+📍 Pune, Maharashtra | 📧 atulpohane21@gmail.com | 📱 +91 95037 61440</pre>
+      <button class="copybutton" onclick="copyText('aboutcopy',this)">Copy</button>
+    </div>
+  </div>
+  <div class="card" style="margin-top:20px">
+    <h3>Contact</h3>
+    <p><a class="case-link" href="mailto:atulpohane21@gmail.com">atulpohane21@gmail.com</a> · <a class="case-link" href="tel:+919503761440">+91 95037 61440</a> · <a class="case-link" href="https://www.linkedin.com/in/atul-pohane-3a26b0273/" target="_blank" rel="noopener">LinkedIn ↗</a></p>
+  </div>
+  <div class="card copybox" style="margin-top:20px">
+    <h3>Featured LinkedIn post</h3>
+    <pre id="post">I’ve completed my Product Management Fellowship and I’m excited to take the next step toward an Associate Product Manager role.
+
+I currently work as a Senior Consultant and bring 2.2 years of technology experience across software testing, automation, APIs and Agile delivery.
+
+During my fellowship, I worked on product case studies covering:
+• User research and problem discovery
+• Competitive analysis
+• MoSCoW and RICE-style prioritization
+• Feature and solution design
+• Product metrics and experimentation
+
+My portfolio includes work on Meesho and CRED, where I explored problems around trust, repeat purchases, payment experience and customer friction.
+
+I’m now looking for opportunities where I can combine my technology background with product thinking and contribute to building customer-focused products.
+
+If you’re hiring for APM / Product roles or know a team that is, I’d love to connect.</pre>
+    <button class="copybutton" onclick="copyText('post',this)">Copy</button>
+  </div>
+</div>
+</section>
+</main>
+
+<footer>
+<div class="container footerin">
+  <div><b>Atul Pohane</b><br>Associate Product Manager candidate</div>
+  <div><a href="mailto:atulpohane21@gmail.com">atulpohane21@gmail.com</a> · <a href="tel:+919503761440">+91 95037 61440</a> · <a href="https://www.linkedin.com/in/atul-pohane-3a26b0273/" target="_blank" rel="noopener">LinkedIn</a></div>
+</div>
+</footer>
+<script>
+function copyText(id,btn){
+ const text=document.getElementById(id).innerText;
+ navigator.clipboard.writeText(text).then(()=>{const old=btn.innerText;btn.innerText='Copied ✓';setTimeout(()=>btn.innerText=old,1200)})
+}
+</script>
+</body>
+</html>
